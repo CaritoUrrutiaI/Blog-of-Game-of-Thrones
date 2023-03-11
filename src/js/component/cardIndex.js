@@ -18,7 +18,7 @@ export const CardIndex = () => {
                 {character.map((value, index) => {
                     return (
                         <div key={index} className="col-3">
-                            <Card title={value.fullName} description="descripcion" imageUrl="" />
+                            <Card title={value.fullName} description="descripcion" imageUrl="" buttonUrl={"/personajes/"+ value.id} />
                         </div>
                     )
                 })}
