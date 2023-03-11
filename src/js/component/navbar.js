@@ -6,17 +6,18 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">
-					<img src="https://wme-gep-drupal-hbo-prod.s3.amazonaws.com/content/dam/hbodata/series/game-of-thrones/series_logos_game-of-thrones.jpg" /></span>
+					<img src="https://logospng.org/download/game-of-thrones/logo-game-of-thrones-256.png" /></span>
 			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
-			</div>
-			<div class="dropdown">
-  				<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Favorites♡</button>
-				<ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="#">Hello</a></li>
+			<Link to= "/personajes">
+				<button className="btn btn-warning">Personajes Game of Thrones</button>
+			</Link>
+			<Link to= "/familias">
+				<button className="btn btn-warning">Familias Game of Thrones</button>
+			</Link>
+			<div className="dropdown">
+  				<button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Mis Favoritos ♡</button>
+				<ul className="dropdown-menu">
+					<li><a className="dropdown-item" href="#">Hello</a></li>
 				</ul>
 			</div>
 		</nav>

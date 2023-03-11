@@ -1,30 +1,25 @@
 import React, { useEffect, useState } from "react";
 import Card from "./card";
- 
+
 export const CardIndex = () => {
     const [character, setCharacter] = useState([])
 
     useEffect(() => {
-		var requestOptions = {
-			method: 'GET',
-			redirect: 'follow'
-		};
-
-		fetch("https://thronesapi.com/", requestOptions)
-			.then(response => response.json())
-			.then(result => setCharacter(result))
-			.catch(error => console.log('error', error));
-	})
+        fetch("https://thronesapi.com/api/v2/Characters")
+            .then(response => response.json())
+            .then(result => setCharacter(result))
+            .catch(error => console.log('error', error));
+    }, [])
+    
     return (
-        <div class="container text-center">
-            <div class="row context-fluid align-items-start">
-                {character.map((value, index)=>{
-                    // if (value.gender =="f"){
-
+        <div className="container text-center">
+            <div className="row context-fluid align-items-start">
+                {console.log(character)}
+                {character.map((value, index) => {
                     return (
-                        <div class="col-3">
-                            <Card title={value.name} description="descripcion" imageUrl=""/>
-                        </div>  
+                        <div key={index} className="col-3">
+                            <Card title={value.fullName} description="descripcion" imageUrl="" />
+                        </div>
                     )
                 })}
             </div>

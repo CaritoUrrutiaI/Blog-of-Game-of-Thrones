@@ -25,6 +25,10 @@ const Layout = () => {
 					<Navbar />
 						<Routes>
 							<Route path="/" element={<Home />} />
+							<Route path="/personajes" element={<Demo />} />
+							<Route path="/familias" element={<Demo />} />
+							<Route path="/detalle/personajes:id" element={<Demo />} />
+							<Route path="/detalle/familia:id" element={<Demo />} />
 							<Route path="/demo" element={<Demo />} />
 							<Route path="/single/:theid" element={<Single />} />
 							<Route path="*" element={<h1>Not found!</h1>} />
