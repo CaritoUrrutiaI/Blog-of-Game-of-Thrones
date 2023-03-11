@@ -18,7 +18,7 @@ export const ContinentIndex = () => {
                 {continents.map((value, index) => {
                     return (
                         <div key={index} className="col-3">
-                            <Card title={value.name} />
+                            <Card title={value.name} buttonUrl={"/continentes/" + value.id} />
                         </div>
                     )
                 })}
