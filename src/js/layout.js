@@ -6,10 +6,10 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
-
+import { Continentes } from "./views/continentes";
+import { Personajes } from "./views/personajes";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { CardIndex } from "./component/cardIndex";
 
 
 //create your first component
@@ -25,15 +25,14 @@ const Layout = () => {
 					<Navbar />
 						<Routes>
 							<Route path="/" element={<Home />} />
-							<Route path="/personajes" element={<Demo />} />
-							<Route path="/familias" element={<Demo />} />
-							<Route path="/detalle/personajes:id" element={<Demo />} />
-							<Route path="/detalle/familia:id" element={<Demo />} />
+							<Route path="/personajes" element={<Personajes />} />
+							<Route path="/continentes" element={<Continentes />} />
+							<Route path="/detalle/personajes/:id" element={<Demo />} />
+							<Route path="/detalle/continentes/:id" element={<Demo />} />
 							<Route path="/demo" element={<Demo />} />
 							<Route path="/single/:theid" element={<Single />} />
 							<Route path="*" element={<h1>Not found!</h1>} />
 						</Routes>
-						<CardIndex />
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>

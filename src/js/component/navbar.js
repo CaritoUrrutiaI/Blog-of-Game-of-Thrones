@@ -11,8 +11,8 @@ export const Navbar = () => {
 			<Link to= "/personajes">
 				<button className="btn btn-warning">Personajes Game of Thrones</button>
 			</Link>
-			<Link to= "/familias">
-				<button className="btn btn-warning">Familias Game of Thrones</button>
+			<Link to= "/continentes">
+				<button className="btn btn-warning">Continentes Game of Thrones</button>
 			</Link>
 			<div className="dropdown">
   				<button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Mis Favoritos ♡</button>
