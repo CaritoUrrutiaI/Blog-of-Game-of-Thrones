@@ -19,4 +19,4 @@ export const Personaje = () => {
             <h2>{personaje?.family}</h2>
         </div>
     );
-    };
+};
