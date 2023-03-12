@@ -1,7 +1,9 @@
-import React from "react";
+import React,{useContext} from "react";
 import PropType from "prop-types";
+import { Context } from "../store/appContext";
 
 const Card = (props) => {
+	const {actions}= useContext(Context)
 	return (
 		<div className="card m-5">
 			<img className="card-img-top" src={props.imageUrl} alt="Card image cap" />
@@ -12,6 +14,11 @@ const Card = (props) => {
 				<a href={props.buttonUrl} className="btn btn-primary">
 					Leer más
 				</a>
+				<div className="col">
+					<button className="btn btn-warning" onClick={()=>{
+						actions.addFav(props.title, props.id)
+					}}>🧡</button>
+				</div>
 			</div>
 		</div>
 	);

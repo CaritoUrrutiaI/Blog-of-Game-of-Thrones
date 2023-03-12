@@ -1,6 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			personajes:[],
+			continentes:[],
+			favoritos:[],
 			demo: [
 				{
 					title: "FIRST",
@@ -15,6 +18,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			addFav:(name,id)=>{
+				const store = getStore();
+				console.log("elem add to fav",name)
+				
+				setStore({favoritos:[...store.favoritos,{name,id}]})
+			},
+			deleteFav:(index)=>{
+				const store = getStore();
+				setStore({favoritos:[...store.favoritos.filter((fav)=>fav.id !== index)]})
+			},
+			getPersonajes: ()=>{
+				fetch("https://thronesapi.com/api/v2/Characters")
+					.then(response => response.json())
+					.then(result => {
+						console.log(result)
+						setStore({personajes: result})
+					})
+			},
+			getContinentes: ()=>{
+				fetch("https://thronesapi.com/api/v2/Continents")
+					.then(response => response.json())
+					.then(result => setStore({continentes: result}))
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
