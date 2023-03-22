@@ -10,7 +10,7 @@ import { Continentes } from "./views/continentes";
 import { Personajes } from "./views/personajes";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { DetallePersonaje } from "./views/detallePersonaje";
+import { DetallePersonaje } from "./views/detallepersonaje";
 import { DetalleContinente } from "./views/detallecontinente";
 
 
